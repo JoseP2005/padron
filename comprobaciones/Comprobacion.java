@@ -1,3 +1,6 @@
+package comprobaciones;
+import dominio.OficinaPadron;
+import dominio.Habitante;
 import java.util.ArrayList;
 public class Comprobacion{
 public static void realizarComprobacion(){

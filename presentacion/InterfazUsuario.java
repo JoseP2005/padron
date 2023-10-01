@@ -1,12 +1,14 @@
+package presentacion;
+import dominio.OficinaPadron;
+import dominio.Habitante;
 import java.util.ArrayList;
 public class InterfazUsuario
 {
-    // El significado de String[] instruccion le permite al usuario ingresar nuevos habitantes a la oficina padron que edita el archivo. csv e incresa los datos del nuevo habitante
     public static void ejecutar(String[] instruccion){
         OficinaPadron padron = new OficinaPadron();
         if (instruccion[0].equalsIgnoreCase("mostrar")&& instruccion.length ==1){
             mostrarOficinaPadron(padron);
-        }else if(instruccion[0].equalsIgnoreCase("anadir")&& instruccion.length == 4){
+        }else if(instruccion[0].equalsIgnoreCase("añadir")&& instruccion.length == 4){
             padron.annadir(new Habitante(instruccion[1],instruccion[2], instruccion[3]));
             System.out.println("Habitante añadidocorrectamente");
         }else{   

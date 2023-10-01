@@ -1,4 +1,7 @@
 #BlueJ package file
+dependency1.from=OficinaPadron
+dependency1.to=Habitante
+dependency1.type=UsesDependency
 objectbench.height=92
 objectbench.width=451
 package.divider.horizontal=0.599791013584117
@@ -9,7 +12,7 @@ package.editor.x=759
 package.editor.y=180
 package.frame.height=600
 package.frame.width=800
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
@@ -30,5 +33,5 @@ target2.name=OficinaPadron
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
-target2.x=140
+target2.x=250
 target2.y=110

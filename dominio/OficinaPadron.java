@@ -1,10 +1,10 @@
 package dominio;
 
-import java.util.Scanner;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.*;
 
 public class OficinaPadron
 {
@@ -23,20 +23,21 @@ public class OficinaPadron
     }
     return suma;    
     }
-    private void cargarHabitantes(){
-        try{
-            File fichero = new File("padron.csv");
+    private void cargarHabitantes() {
+    try {
+        File fichero = new File("padron.csv");
         fichero.createNewFile();
         Scanner sc = new Scanner(fichero);
         sc.useDelimiter(",|\n");
-        while(sc.hasNext()){
-            Habitante habitante = new Habitante(sc.next(),
-                                                sc.next(),
-                                                sc.next());
+        while (sc.hasNext()) {
+            String nombre = sc.next();
+            String apellido1 = sc.hasNext() ? sc.next() : "";
+            String apellido2 = sc.hasNext() ? sc.next() : "";
+            Habitante habitante = new Habitante(nombre, apellido1, apellido2);
             habitantesPadron.add(habitante);
         }
         sc.close();
-    }catch(IOException ex){
+    } catch(IOException ex) {
         System.out.println("No hay habitantes inscritos");
     }
     }
