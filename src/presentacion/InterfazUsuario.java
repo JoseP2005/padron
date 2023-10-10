@@ -4,16 +4,21 @@ import dominio.Habitante;
 import java.util.ArrayList;
 public class InterfazUsuario
 {
-    public static void ejecutar(String[] instruccion){
+    public static boolean ejecutar(String[] instruccion){
         OficinaPadron padron = new OficinaPadron();
         if (instruccion[0].equalsIgnoreCase("mostrar")&& instruccion.length ==1){
             mostrarOficinaPadron(padron);
         }else if(instruccion[0].equalsIgnoreCase("añadir")&& instruccion.length == 4){
             padron.annadir(new Habitante(instruccion[1],instruccion[2], instruccion[3]));
-            System.out.println("Habitante añadidocorrectamente");
+            System.out.println("Habitante añadido correctamente");
+        
+        }else if(instruccion[0].equalsIgnoreCase("salir")){
+            padron.volcarContactos();
+            return false;
         }else{   
             System.out.println("Error en la instrucción");
         }
+        return true;
     }
     private static void mostrarOficinaPadron(OficinaPadron padron){
         ArrayList<Habitante> habitantes = padron.getHabitantesPadron();

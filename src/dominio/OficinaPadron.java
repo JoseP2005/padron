@@ -13,7 +13,7 @@ public class OficinaPadron
     habitantesPadron.add(habitante);
     volcarContactos();
     }
-    public ArrayList getHabitantesPadron(){
+    public ArrayList<Habitante> getHabitantesPadron(){
     return habitantesPadron;
     }
     public int calcularNumeroHabitantes(){
