@@ -27,5 +27,5 @@ runjar: jar
 	@echo "Manifest-Version: 1.0" > manifest.txt
 	@echo "Main-Class:" $(MAIN_CLASS) >> manifest.txt
 	@echo "Class-Path: . ">> manifest.txt
-	@echo "" >> manifest.txt	
+	@echo "" >> manifest.txt
 	java -jar $(JAR_FILE) 
