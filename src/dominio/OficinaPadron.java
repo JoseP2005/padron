@@ -6,8 +6,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.*;
 
-public class OficinaPadron
-{
+public class OficinaPadron{
     private ArrayList<Habitante> habitantesPadron = new ArrayList<>();
     public void annadir(Habitante habitante){
     habitantesPadron.add(habitante);
